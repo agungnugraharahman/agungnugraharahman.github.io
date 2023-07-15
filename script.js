@@ -35,39 +35,18 @@ function checkAnswer() {
     const correctAnswer = questions[currentQuestionIndex].answer;
 
     if (userAnswer === correctAnswer) {
-        resultElement.innerHTML = "Jawaban benar!";
+        resultElement.innerHTML = "Jawaban Anda benar!";
         score += 10;
-        nextBtn.style.display = "block";
     } else {
-        resultElement.innerHTML = "Jawaban salah. Coba lagi.";
-        currentQuestionIndex++;
-        showQuestion();
+        resultElement.innerHTML = "Jawaban Anda salah!";
     }
 
-    scoreElement.innerHTML = "Skor Akhir: " + score;
-
-    checkBtn.disabled = true;
-    retryBtn.style.display = "block";
-}
-
-function goToNextQuestion() {
     currentQuestionIndex++;
-
-    if (currentQuestionIndex < questions.length) {
-        showQuestion();
-    } else {
-        questionElement.innerHTML = "Permainan selesai!";
-        answerElement.style.display = "none";
-        checkBtn.style.display = "none";
-        scoreElement.style.display = "block";
-        scoreElement.innerHTML = "Skor Akhir: " + score;
-        nextBtn.style.display = "none";
-    }
+    showQuestion();
 }
 
 function showQuestion() {
     retryBtn.style.display = "none";
-    nextBtn.style.display = "none";
 
     if (currentQuestionIndex < questions.length) {
         questionElement.innerHTML = "Nama: " + playerName + "<br>Kelas: " + playerClass + "<br><br>" + questions[currentQuestionIndex].question;
@@ -94,9 +73,9 @@ function restartGame() {
 checkBtn.addEventListener("click", checkAnswer);
 retryBtn.addEventListener("click", showQuestion);
 const nextBtn = document.createElement("button");
-nextBtn.textContent = "Next";
+nextBtn.textContent = "Next"
 nextBtn.style.display = "none";
-nextBtn.addEventListener("click", goToNextQuestion);
+nextBtn.addEventListener("click", showQuestion);
 document.getElementById("game-container").appendChild(nextBtn);
 
 const homepage = document.querySelector(".homepage");
