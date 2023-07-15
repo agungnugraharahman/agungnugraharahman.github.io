@@ -101,6 +101,7 @@ function startGame() {
     playerClass = kelas;
 
     restartGame();
+    playBacksound();
 }
 
 mulaiBtn.addEventListener("click", startGame);
@@ -108,4 +109,9 @@ mulaiBtn.addEventListener("click", startGame);
 function playCoinSound() {
     const coinSound = new Audio('coin-sound.mp3');
     coinSound.play();
+}
+
+function playBacksound() {
+    const backsound = document.getElementById("backsound");
+    backsound.play();
 }
