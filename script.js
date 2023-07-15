@@ -13,7 +13,7 @@ const questions = [
     },
     {
         question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3-4x<br>g(x) = x^2 + 4 - 1<br>Tentukan nilai dari (f o g)(x)",
-        answer: "8",
+        answer: "10",
     }
 ];
 
