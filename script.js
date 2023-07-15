@@ -10,13 +10,11 @@ const questions = [
     {
         question: "Diberikan fungsi-fungsi berikut:<br>f(x) = x^3<br>g(x) = Math.sqrt(x)<br>Tentukan nilai dari (f o g)(4)",
         answer: "8",
-
-        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3 - 4x<br>g(x) = x^2 + 4 - 1<br>Tentukan nilai dari (f o g)(x)",
-        answer: "10",
-
-        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3 - 4x<br>g(x) = x^2 + 4 - 1<br>Tentukan nilai dari (f o g)(x)",
-        answer: "10",
     },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3-4x<br>g(x) = x^2 + 4 - 1<br>Tentukan nilai dari (f o g)(x)",
+        answer: "8",
+    }
 ];
 
 let playerName = "";
