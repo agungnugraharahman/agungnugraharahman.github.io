@@ -37,6 +37,7 @@ function checkAnswer() {
     if (userAnswer === correctAnswer) {
         resultElement.innerHTML = "Jawaban Anda benar!";
         score += 10;
+        playCoinSound();
     } else {
         resultElement.innerHTML = "Jawaban Anda salah!";
     }
@@ -103,3 +104,8 @@ function startGame() {
 }
 
 mulaiBtn.addEventListener("click", startGame);
+
+function playCoinSound() {
+    const coinSound = new Audio('coin-sound.mp3');
+    coinSound.play();
+}
