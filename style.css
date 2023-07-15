@@ -135,3 +135,42 @@ button:hover {
     font-size: 36px;
     animation: rainbowText 5s linear infinite; /* Efek animasi berkedip warna-warni */
 }
+
+/* Styling untuk tampilan di perangkat mobile */
+@media screen and (max-width: 600px) {
+    /* Ubah lebar container dan posisi teks agar sesuai dengan tampilan di perangkat mobile */
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .welcome-container h1 {
+        font-size: 24px;
+    }
+    .author {
+        font-size: 16px;
+    }
+    .input-container {
+        text-align: center;
+    }
+    .input-container input,
+    .input-container button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .gamepage {
+        text-align: center;
+    }
+    .gamepage h1 {
+        font-size: 24px;
+    }
+    .gamepage input,
+    .gamepage button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+    #score {
+        font-size: 16px;
+    }
+}
