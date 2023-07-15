@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Super Mario Bros';
+    src: url('super-mario-bros.ttf') format('truetype');
+    /* Atur path font sesuai dengan nama file font yang diunduh */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+
+    /* Hapus background-color */
+    background-image: url('mario-pattern.png');
+    background-size: 1000px 800px; /* Sesuaikan ukuran pattern dengan gambar */
+    background-repeat: repeat; /* Ulang pattern secara horizontal dan vertikal */
+    background-position: 0 0; /* Posisi pattern pada awal (kiri atas) */
+    /* Hapus atau komentari animasi background bergerak */
+    /* animation: backgroundMove 5s linear infinite; */
+
+    /* Ganti properti lainnya seperti font atau warna teks jika diperlukan */
+    color: white;
+    font-family: 'Super Mario Bros', sans-serif;
+}
+
+.author {
+    color: white; /* Ganti warna tulisan menjadi putih */
+    font-size: 50px; /* Ganti ukuran font sesuai keinginan */
+    font-family: 'Super Mario Bros', sans-serif;
+}
+
+.welcome-container {
+    text-align: center; /* Rata tengahkan teks di dalam div */
+    margin-top: 50px; /* Sesuaikan jarak atas dari elemen lain jika diperlukan */
+}
+
+@keyframes backgroundMove {
+    to {
+        background-position: -40px -40px; /* Geser pattern sejauh 40px ke kiri dan 40px ke atas */
+    }
+}
+
+.gamepage {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin-top: 0;
+    animation: fadeInUp 1s ease;
+    color: #fff; /* Warna putih */
+    font-size: 50px; /* Ganti ukuran font sesuai keinginan */
+    /* Tambahkan properti text-shadow dengan outline hitam */
+    text-shadow: 2px 2px 2px black;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: pulse 1s infinite;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff; /* Warna biru */
+
+    font-size: 30px;
+}
+
+#final-score {
+    font-size: 36px;
+}
+
+#container img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+body, button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Warna biru tua saat tombol dihover */
+}
+
+/* Kode CSS tambahan untuk efek animasi warna-warni */
+@keyframes rainbowText {
+    0% { color: #f50; } /* Warna merah */
+    14% { color: #fe3; } /* Warna oranye */
+    28% { color: #ee3; } /* Warna kuning */
+    42% { color: #3f3; } /* Warna hijau */
+    56% { color: #36f; } /* Warna biru */
+    70% { color: #b33; } /* Warna ungu */
+    84% { color: #f50; } /* Warna merah */
+    100% { color: #fe3; } /* Warna oranye */
+}
+
+.welcome-container h1 {
+    font-family: 'Super Mario Bros', sans-serif;
+    font-size: 48px;
+    animation: rainbowText 5s linear infinite; /* Efek animasi berkedip warna-warni */
+}
+
+.welcome-container .author {
+    font-family: 'Super Mario Bros', sans-serif;
+    font-size: 36px;
+    animation: rainbowText 5s linear infinite; /* Efek animasi berkedip warna-warni */
+}
