@@ -1,20 +1,48 @@
 const questions = [
     {
-        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 2x + 3<br>g(x) = x^2<br>Tentukan nilai dari (f o g)(2)",
-        answer: "11",
+        question: "1. Untuk menjawab pertanyaan yang jawabannya berupa pertidaksamaan, jawablah seperti ini -3x^2-2x+8 bukan -3x^2 - 2x + 8 ( tidak dispasi setiap bilangan) agar dapat terdeteksi oleh sistem.<br><br>2. Tanda ^ artinya untuk melambangkan pangkat.<br><br>3. Ketik 'Iya' jika sudah paham.",
+        answer: "Iya",
     },
     {
-        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = sin(x)<br>g(x) = 2x<br>Tentukan nilai dari (g o f)(Math.PI / 6)",
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3 - 4x<br>g(x) = x^2 + 4x - 1<br>Tentukan nilai dari (f o g)(x)",
+        answer: "-4x^2-16x+7",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3 - 4x<br>g(x) = x^2 + 4x - 1<br>Tentukan nilai dari (f o g)(5)",
+        answer: "-173",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = x^2 - 3x + 1<br>g(x) = 2x - 3<br>Tentukan nilai dari (g o f)(x)",
+        answer: "2x^2-6x-1",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = x^2 - 3x + 1<br>g(x) = 2x - 3<br>Tentukan nilai dari (g o f)(-3)",
+        answer: "35",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3x + 1<br>g(x) = -3x + 3<br>Tentukan nilai dari (f o g)(x)",
+        answer: "-9x+10",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3x + 1<br>g(x) = -3x + 3<br>Tentukan nilai dari (f o g)(5)",
+        answer: "-35",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3x - 4<br>g(x) = 2x^2 + 4x - 5<br>Tentukan nilai dari (f o g)(x)",
+        answer: "6x^2+12x-19",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3x - 4<br>g(x) = 2x^2 + 4x - 5<br>Tentukan nilai dari (f o g)(-1)",
+        answer: "-25",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = x^2<br>g(x) = x + 1<br>Tentukan nilai dari (g o f)(x)",
+        answer: "x^2+1",
+    },
+    {
+        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = x^2<br>g(x) = x + 1<br>Tentukan nilai dari (g o f)(0)",
         answer: "1",
     },
-    {
-        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = x^3<br>g(x) = Math.sqrt(x)<br>Tentukan nilai dari (f o g)(4)",
-        answer: "8",
-    },
-    {
-        question: "Diberikan fungsi-fungsi berikut:<br>f(x) = 3-4x<br>g(x) = x^2 + 4 - 1<br>Tentukan nilai dari (f o g)(x)",
-        answer: "10",
-    }
 ];
 
 let playerName = "";
