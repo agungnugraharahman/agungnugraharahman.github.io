@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f5f5f5;
     /* Hapus background-color */
     background-image: url('mario-pattern.png');
@@ -52,7 +52,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .input-container {
@@ -100,15 +100,6 @@ h1 {
     text-shadow: 2px 2px 2px black;
 }
 
-h2 {
-    margin-top: 0;
-    animation: fadeInUp 1s ease;
-    color: #fff; /* Warna putih */
-    font-size: 50px; /* Ganti ukuran font sesuai keinginan */
-    /* Tambahkan properti text-shadow dengan outline hitam */
-    font-family: 'Super Mario Bros', sans-serif;
-    text-shadow: 2px 2px 2px black;
-}
 
 input[type="text"], select {
     width: 100%;
@@ -188,12 +179,6 @@ button:hover {
     animation: rainbowText 5s linear infinite; /* Efek animasi berkedip warna-warni */
 }
 
-.welcome-container h2 {
-    font-family: 'Super Mario Bros', sans-serif;
-    font-size: 48px;
-    animation: rainbowText 5s linear infinite; /* Efek animasi berkedip warna-warni */
-}
-
 .welcome-container .author {
     font-family: 'Super Mario Bros', sans-serif;
     font-size: 36px;
@@ -201,17 +186,14 @@ button:hover {
 }
 
 /* Styling untuk tampilan di perangkat mobile */
-@media screen and (max-width: 600px) {
-    /* Ubah lebar container dan posisi teks agar sesuai dengan tampilan di perangkat mobile */
-    .container {
-        max-width: 100%;
-        padding: 10px;
-    }
-    .welcome-container h1 {
-        font-size: 24px;
+/* CSS untuk perangkat mobile */
+@media screen and (max-width: 350px) {
+    .input-container input {
+        width: 100%;
     }
 
-    .welcome-container h2 {
+
+    .welcome-container h1 {
         font-size: 24px;
     }
 
@@ -231,9 +213,6 @@ button:hover {
         text-align: center;
     }
     .gamepage h1 {
-        font-size: 24px;
-    }
-    .gamepage h2 {
         font-size: 24px;
     }
     .gamepage input,

@@ -13,9 +13,9 @@
                 <h1>Hello! Selamat Datang di Permainan Komposisi Matematika!</h1>
                 <p class="author">Oleh Zurrahmah, S.Pd</p>
             </div>
-            <div class="input-container start-button-container"> <!-- Tambahkan class start-button-container -->
-                <input type="text" id="nama" placeholder="Masukkan Nama" class="nama-kelas"> <!-- Tambahkan class nama-kelas untuk font "Nama" dan "Kelas" -->
-                <input type="text" id="kelas" placeholder="Masukkan Kelas" class="nama-kelas"> <!-- Tambahkan class nama-kelas untuk font "Nama" dan "Kelas" -->
+            <div class="input-container start-button-container">
+                <input type="text" id="nama" placeholder="Masukkan Nama" class="nama-kelas">
+                <input type="text" id="kelas" placeholder="Masukkan Kelas" class="nama-kelas">
                 <button id="mulaiBtn">Mulai Permainan</button>
             </div>
         </div>
@@ -24,14 +24,12 @@
     <div class="gamepage" style="display: none;">
         <div id="game-container">
             <h1 id="question"></h1>
-            <h2 id="nama"></h2>
-            <h2 id="kelas"></h2>
             <input type="text" id="answer" placeholder="Masukkan Jawaban">
             <button id="checkBtn">Cek Jawaban</button>
             <button id="retryBtn" style="display: none;">Coba Lagi</button>
             <p id="result"></p>
         </div>
-        <p id="score" style="display: none; font-size: 48px;" class="nama-kelas">Skor Akhir: 0</p> <!-- Tambahkan class nama-kelas untuk font "Nama" dan "Kelas" -->
+        <p id="score" style="display: none; font-size: 48px;" class="nama-kelas">Skor Akhir: 0</p>
     </div>
 
     <audio id="backsound" loop>
