@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "1. Untuk menjawab pertanyaan yang jawabannya berupa pertidaksamaan, jawablah seperti ini -3x^2-2x+8 bukan -3x^2 - 2x + 8 ( tidak dispasi setiap bilangan) agar dapat terdeteksi oleh sistem.<br><br>2. Tanda ^ artinya untuk melambangkan pangkat.<br><br>3. Ketik 'Iya' jika sudah paham.",
+        question: "PENTING!!<br><br>1. Untuk menjawab pertanyaan yang jawabannya berupa pertidaksamaan, jawablah seperti ini -3x^2-2x+8 bukan -3x^2 - 2x + 8 ( tidak dispasi setiap bilangan) agar dapat terdeteksi oleh sistem.<br><br>2. Tanda ^ artinya untuk melambangkan pangkat.<br><br>3. Ketika Mendengar suara koin 'ting' artinya jawaban Anda Benar.<br><br>4. Ketik 'Iya' jika sudah paham.",
         answer: "Iya",
     },
     {
