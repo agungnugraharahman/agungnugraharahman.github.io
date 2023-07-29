@@ -1,230 +1,280 @@
-/* CSS untuk font "Super Mario Bros" */
-@font-face {
+body {
     font-family: 'Super Mario Bros';
     src: url('super-mario-bros.ttf') format('truetype');
-    /* Atur path font sesuai dengan nama file font yang diunduh */
-}
-
-/* CSS untuk font "Tahoma" */
-body, button {
-    font-family: 'Tahoma', sans-serif;
-}
-
-/* CSS untuk font "Nama" dan "Kelas" */
-.nama-kelas {
-    font-family: 'Super Mario Bros', sans-serif;
-}
-
-/* Seluruh kode CSS lainnya */
-body {
+    text-align: center;
+    background-color: #f1f1f1;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
-    /* Hapus background-color */
-    background-image: url('mario-pattern.png');
-    background-size: 1000px 800px; /* Sesuaikan ukuran pattern dengan gambar */
-    background-repeat: repeat; /* Ulang pattern secara horizontal dan vertikal */
-    background-position: 0 0; /* Posisi pattern pada awal (kiri atas) */
-    /* Hapus atau komentari animasi background bergerak */
-    /* animation: backgroundMove 5s linear infinite; */
-    /* Ganti properti lainnya seperti font atau warna teks jika diperlukan */
-    color: rgb(255, 0, 0);
-    font-family: 'Super Mario Bros', sans-serif;
+    line-height: 1.5; /* Line spacing 1,5 */
 }
 
-.author {
-    color: white; /* Ganti warna tulisan menjadi putih */
-    font-size: 50px; /* Ganti ukuran font sesuai keinginan */
-    font-family: 'Super Mario Bros', sans-serif;
-}
+@media only screen and (min-width: 769px) {
 
-.welcome-container {
-    text-align: center; /* Rata tengahkan teks di dalam div */
-    margin-top: 50px; /* Sesuaikan jarak atas dari elemen lain jika diperlukan */
-}
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-image-source: url('mariobros-border.png');
+        border-image-slice: 90 90 90 90 fill;
+        border-image-width: 20px;
+        border-image-repeat: round;
+        background-color: #ffffff9f;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        line-height: 1.5; /* Line spacing 1,5 */
+    }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
+    h1 {
+        margin-bottom: 15px;
+        font-size: 25px;
+        font-family: 'Super Mario Bros', cursive;
+        background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #33cc33, #3366ff, #9933cc, #ff33cc);
+        background-size: 600% 600%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #000; /* Add text-stroke effect to the gradient text */
+        -webkit-text-fill-color: transparent;
+        animation: gradientAnimation 15s infinite;
+        line-height: 1.5; /* Line spacing 1,5 */
+        margin-bottom: 20px; 
+    }
 
-.input-container {
-    margin-top: 20px;
-}
+    .input-container {
+        margin-bottom: 10px;
+    }
 
-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    font-family: 'Tahoma', sans-serif; /* Font "Tahoma" untuk tombol */
-}
+    input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        margin: 7px 0;
+        border: 2px solid #ff0000;
+        border-radius: 5px;
+        ::placeholder { /* Ukuran placeholder */
+            font-size: 14px;
+        }
+    }   
 
-@keyframes backgroundMove {
-    to {
-        background-position: -40px -40px; /* Geser pattern sejauh 40px ke kiri dan 40px ke atas */
+    button {
+        padding: 10px 20px;
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+        animation: shakeAnimation 0.5s infinite, colorChangeAnimation 1s infinite, zoomAnimation 0.5s infinite;
+    }
+
+    #score {
+        font-size: 18px;
+        font-family: 'Rockwell';
+        font-weight: bold;
+        margin-top: 10px;
+        line-height: 1.5; /* Line spacing 1,5 */
+    }
+
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('path_to_mario.gif'); 
+        background-size: cover;
+        z-index: -1;
+    }
+    
+    .background1 {
+        position: fixed;
+        top: 5%;
+        left: 13%;
+        transform: translate(-100%, -100%) scale(1); /* Menengahkan .background1 dan mengatur skala awal */
+        width: 77%;
+        height: 6%;
+        background-image: url('mariobros-image.png'); 
+        background-size: cover;
+        z-index: -1;
+        animation: zoomAnimation 10s infinite alternate; /* Atur animasi zoom pada gambar */
+    }
+    
+    .background2 {
+        position: fixed;
+        top: 14%;
+        left: 35%;
+        transform: translate(-100%, -100%) scale(1); 
+        width: 31%;
+        height: 4.2%;
+        background-image: url('mariobros-image-1.png'); 
+        background-size: cover;
+        z-index: -1;
+        animation: zoomAnimation 10s infinite alternate; /* Atur animasi zoom pada gambar */
     }
 }
 
-.gamepage {
-    animation: fadeIn 0.5s ease-in-out;
-}
+@media only screen and (max-width: 768px) {
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-image-source: url('mariobros-border.png');
+        border-image-slice: 90 90 90 90 fill;
+        border-image-width: 20px;
+        border-image-repeat: round;
+        background-color: #ffffff9f;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        line-height: 1.5; /* Line spacing 1,5 */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: 25px;
+        font-family: 'Super Mario Bros', cursive;
+        background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #33cc33, #3366ff, #9933cc, #ff33cc);
+        background-size: 600% 600%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #000; /* Add text-stroke effect to the gradient text */
+        -webkit-text-fill-color: transparent;
+        animation: gradientAnimation 15s infinite;
+        line-height: 1.5; /* Line spacing 1,5 */
+        margin-bottom: 20px; 
+    }
+
+    .input-container {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        margin: 7px 0;
+        border: 2px solid #ff0000;
+        border-radius: 5px;
+        ::placeholder { /* Ukuran placeholder */
+            font-size: 14px;
+        }
+    }   
+
+    button {
+        padding: 10px 20px;
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+        animation: shakeAnimation 0.5s infinite, colorChangeAnimation 1s infinite, zoomAnimation 0.5s infinite;
+    }
+
+    #score {
+        font-size: 18px;
+        font-family: 'Rockwell';
+        font-weight: bold;
+        margin-top: 10px;
+        line-height: 1.5; /* Line spacing 1,5 */
+    }
+
+    .backgroundMobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('path_to_mario.gif'); 
+        background-size: cover;
+        z-index: -1;
+    }
+    
+    .background1Mobile {
+        position: fixed;
+        top: 22%;
+        left: 8%;
+        transform: translate(-100%, -100%) scale(1); /* Menengahkan .background1 dan mengatur skala awal */
+        width: 85%;
+        height: 1.54%;
+        background-image: url('mariobros-image.png'); 
+        background-size: cover;
+        z-index: -1;
+        animation: zoomAnimation 10s infinite alternate; /* Atur animasi zoom pada gambar */
+    }
+    
+    .background2Mobile {
+        position: fixed;
+        top: 25%;
+        left: 20%;
+        transform: translate(-100%, -100%) scale(1); 
+        width: 60%;
+        height: 1.8%;
+        background-image: url('mariobros-image-1.png'); 
+        background-size: cover;
+        z-index: -1;
+        animation: zoomAnimation 10s infinite alternate; /* Atur animasi zoom pada gambar */
     }
 }
 
-.nama-kelas-pertanyaan {
-    font-family: 'Super Mario Bros', sans-serif;
+/* Animasi menggoyangkan tombol saat dihover */
+@keyframes shakeAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
 }
 
-h1 {
-    margin-top: 0;
-    animation: fadeInUp 1s ease;
-    color: #fff; /* Warna putih */
-    font-size: 50px; /* Ganti ukuran font sesuai keinginan */
-    /* Tambahkan properti text-shadow dengan outline hitam */
-    font-family: 'Tahoma', sans-serif;
-    text-shadow: 2px 2px 2px black;
+/* Animasi pergantian warna tombol saat dihover */
+@keyframes colorChangeAnimation {
+    0% { background-color: #007bff; }
+    50% { background-color: #0056b3; }
+    100% { background-color: #007bff; }
 }
 
-
-input[type="text"], select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Animasi mengembang dan mengecil tombol saat dihover */
+@keyframes zoomAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    animation: pulse 2s infinite; /* Tambahkan animasi pulse pada tombol Mulai Permainan */
+/* Animasi belok gambar saat dihover */
+@keyframes rotateAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-#result {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #fff; /* Warna biru */
-    font-size: 30px;
-}
-
-/* Kode CSS tambahan untuk efek animasi tombol Mulai Permainan */
-#mulaiBtn {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
+@keyframes gradientAnimation {
     0% {
-        transform: scale(1);
+      background-position: 0% 50%;
     }
     50% {
-        transform: scale(1.05);
+      background-position: 100% 50%;
     }
     100% {
-        transform: scale(1);
+      background-position: 0% 50%;
     }
 }
 
-#final-score {
-    font-size: 36px;
+img:hover {
+    animation: rotateAnimation 1s infinite; /* Gambar akan berputar saat dihover */
 }
 
-#container img {
-    max-width: 100%;
-    display: block;
-    margin-bottom: 20px;
-}
-
-body, button {
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #10c600; /* Warna biru tua saat tombol dihover */
-}
-
-/* Kode CSS tambahan untuk efek animasi warna-warni */
-@keyframes rainbowText {
-    0% { color: #f50; } /* Warna merah */
-    14% { color: #fe3; } /* Warna oranye */
-    28% { color: #ee3; } /* Warna kuning */
-    42% { color: #3f3; } /* Warna hijau */
-    56% { color: #36f; } /* Warna biru */
-    70% { color: #b33; } /* Warna ungu */
-    84% { color: #f50; } /* Warna merah */
-    100% { color: #fe3; } /* Warna oranye */
-}
-
-.welcome-container h1 {
-    font-family: 'Super Mario Bros', sans-serif;
-    font-size: 48px;
-    animation: rainbowText 5s linear infinite; /* Efek animasi berkedip warna-warni */
-}
-
-.welcome-container .author {
-    font-family: 'Super Mario Bros', sans-serif;
-    font-size: 36px;
-    animation: rainbowText 5s linear infinite; /* Efek animasi berkedip warna-warni */
-}
-
-/* Styling untuk tampilan di perangkat mobile */
-@media screen and (max-width: 600px) {
-    /* Ubah lebar container dan posisi teks agar sesuai dengan tampilan di perangkat mobile */
-    .container {
-        max-width: 100%;
-        padding: 10px;
-    }
-    .welcome-container h1 {
-        font-size: 24px;
-    }
-
-    .author {
-        font-size: 16px;
-    }
-    .input-container {
-        text-align: center;
-    }
-    .input-container input,
-    .input-container button {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-    }
-    .gamepage {
-        text-align: center;
-    }
-    .gamepage h1 {
-        font-size: 24px;
-    }
-    .gamepage input,
-    .gamepage button {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-    }
-    #score {
-        font-size: 16px;
-    }
-    .start-button-container {
-        display: flex;
-        justify-content: center;
-    }
+/* Animasi background Minecraft bergerak */
+@keyframes slideBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }

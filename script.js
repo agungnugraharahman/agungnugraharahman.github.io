@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "PENTING!!<br><br>1. Untuk menjawab pertanyaan yang jawabannya berupa pertidaksamaan, jawablah seperti ini -3x^2-2x+8 bukan -3x^2 - 2x + 8 ( tidak dispasi setiap bilangan) agar dapat terdeteksi oleh sistem.<br><br>2. Tanda ^ artinya untuk melambangkan pangkat.<br><br>3. Ketika Mendengar suara koin 'ting' artinya jawaban Anda Benar.<br><br>4. Ketik 'Iya' jika sudah paham.",
+        question: "<br><br><br>PENTING!!<br><br>1. Untuk menjawab pertanyaan yang jawabannya berupa pertidaksamaan, jawablah seperti ini -3x^2-2x+8 bukan -3x^2 - 2x + 8 ( tidak dispasi setiap bilangan) agar dapat terdeteksi oleh sistem.<br><br>2. Tanda ^ artinya untuk melambangkan pangkat.<br><br>3. Ketika Mendengar suara koin 'ting' artinya jawaban Anda Benar.<br><br>4. Ketik 'Iya' jika sudah paham.",
         answer: "Iya",
     },
     {
@@ -45,8 +45,6 @@ const questions = [
     },
 ];
 
-let playerName = "";
-let playerClass = "";
 let score = 0;
 let currentQuestionIndex = 0;
 
@@ -63,11 +61,11 @@ function checkAnswer() {
     const correctAnswer = questions[currentQuestionIndex].answer;
 
     if (userAnswer === correctAnswer) {
-        resultElement.innerHTML = "Jawaban Anda benar!";
+        resultElement.innerHTML;
         score += 10;
         playCoinSound();
     } else {
-        resultElement.innerHTML = "Jawaban Anda salah!";
+        resultElement.innerHTML;
     }
 
     currentQuestionIndex++;
@@ -78,7 +76,7 @@ function showQuestion() {
     retryBtn.style.display = "none";
 
     if (currentQuestionIndex < questions.length) {
-        questionElement.innerHTML = "Nama: " + playerName + "<br>Kelas: " + playerClass + "<br><br>" + questions[currentQuestionIndex].question;
+        questionElement.innerHTML = questions[currentQuestionIndex].question;
         answerElement.value = "";
         resultElement.innerHTML = "";
         checkBtn.disabled = false;
